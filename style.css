@@ -6,6 +6,10 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
+    /* scroll-behavior:smooth; */
+}
+
+html{
     scroll-behavior:smooth;
 }
 
@@ -23,8 +27,7 @@
 
     --glass:rgba(255,255,255,.05);
 
-    --shadow:
-    0 10px 30px rgba(0,0,0,.25);
+    --shadow:0 10px 30px rgba(0,0,0,.25);
 }
 
 body{
@@ -238,25 +241,31 @@ header{
 .primary{
 
     background:var(--secondary);
+    
+    color:rgba(255, 255, 255, 0.701);
 
-    color:white;
+    transition: all .3s ease-in;
 }
 
 .primary:hover{
-
     transform:translateY(-3px);
+    box-shadow: 1px 2px 10px rgb(39, 39, 141);
+    color:rgba(255, 238, 238, 0.998);
 }
 
 .secondary{
 
     border:1px solid var(--border);
+    
+    color:rgba(255, 255, 255, 0.68);
 
-    color:white;
+    transition: all .3s ease-in;
 }
 
 .secondary:hover{
-
     background:var(--card);
+    
+    color:rgb(255, 255, 255);
 }
 
 /* =========================
@@ -315,12 +324,12 @@ header{
 
     padding:35px;
 
-    transition:.4s;
+    transition:all .3s ease-in;
 }
 
 .stat-card:hover{
-
     transform:translateY(-8px);
+    box-shadow:inset 1px 1px 10px aqua;
 }
 
 .stat-card h2{
@@ -345,8 +354,17 @@ header{
     backdrop-filter:blur(12px);
 
     padding:30px;
+}
 
+.category-container div{
     box-shadow:var(--shadow);
+    transition: all .4s ease-in; 
+}
+.category-container div:hover{ 
+    transform: scale(1.04);
+    box-shadow: inset 1px 1px 10px aqua;
+    background-color: rgba(0, 255, 255, 0.261);
+    /* color: black; */
 }
 
 /* =========================
@@ -366,8 +384,7 @@ header{
 
     display:grid;
 
-    grid-template-columns:
-    repeat(4,1fr);
+    grid-template-columns:repeat(4,1fr);
 }
 
 .table-row div{
@@ -408,16 +425,15 @@ header{
 
     padding:25px;
 
-    transition:.4s;
+    transition:all .3s ease-in-out;
 }
 
 .topic-card:hover{
-
     transform:translateY(-8px);
+    box-shadow:inset 1px 1px 15px rgb(18, 212, 255);
 }
 
 .topic-card h3{
-
     margin-bottom:15px;
 }
 
@@ -488,6 +504,8 @@ header{
     padding:20px;
 
     position:relative;
+
+    transition:all .3s ease-in;
 }
 
 .timeline-item::before{
@@ -506,6 +524,10 @@ header{
     left:-51px;
 
     top:24px;
+}
+
+.timeline-item:hover{
+    box-shadow:inset 1px 1px 5px aqua;
 }
 
 /* =========================
@@ -527,11 +549,22 @@ header{
     border-radius:24px;
 
     padding:40px;
+
+    transition: all .4s ease-in;
 }
+
+.author-card:hover{
+    box-shadow: inset 1px 1px 10px aqua;
+    background-color: rgba(3, 255, 255, 0.517) ;
+    color: #161b22;
+}
+
+
 
 .avatar{
 
     width:100px;
+
     height:100px;
 
     margin:auto;
@@ -551,12 +584,21 @@ header{
     font-weight:700;
 
     margin-bottom:20px;
+    transition: all .3s ease-in;
 }
 
 .author-card h3{
 
     margin-bottom:15px;
 }
+
+.avatar:hover{
+    box-shadow: inset 1px 1px 20px rgba(0, 21, 255, 0.591);
+    background-color: rgba(3, 62, 255, 0.876) ;
+    color: white;
+}
+
+
 
 /* =========================
    SOCIAL
@@ -588,7 +630,13 @@ header{
 
     text-align:center;
 
-    transition:.3s;
+    transition:all .3s ease-in;
+}
+
+.social-card:hover{
+    box-shadow: inset 1px 1px 10px aqua;
+    background-color: rgba(3, 255, 255, 0.517) ;
+    color: #161b22; 
 }
 
 .social-card i{
